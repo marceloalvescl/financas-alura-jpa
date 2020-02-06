@@ -1,6 +1,7 @@
 package br.com.caelum.financas.modelo;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
@@ -20,6 +21,14 @@ import br.com.caelum.financas.modelo.enums.TipoMovimentacao;
 @Entity
 public class Movimentacao {
 	
+	@Override
+	public String toString() {
+		return "\nMovimentacao: " + id + "\n valor=" + valor + ",\n tipo=" + tipo + 
+				",\n data=" + new SimpleDateFormat().format(data.getTime()) + 
+				",\n descricao=" + descricao + ",\n conta= " + conta.getNumero() + ", " + 
+				conta.getCliente().getNome() + ",\n categorias=" + categorias + "\n---";
+	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;

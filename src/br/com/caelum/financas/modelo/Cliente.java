@@ -60,4 +60,9 @@ public class Cliente {
 	public void setConta(Conta conta) {
 		this.conta = conta;
 	}
+	
+	@Override
+	public String toString() {
+		return "Cliente [nome=" + nome + "]";
+	}
 }

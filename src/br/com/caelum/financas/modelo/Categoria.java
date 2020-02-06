@@ -8,6 +8,11 @@ import javax.persistence.Id;
 @Entity
 public class Categoria {
 
+	@Override
+	public String toString() {
+		return "Categoria [nome=" + nome + "]";
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
