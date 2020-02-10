@@ -10,7 +10,7 @@ public class Categoria {
 
 	@Override
 	public String toString() {
-		return "Categoria [nome=" + nome + "]";
+		return "Categoria=" + nome;
 	}
 
 	@Id
